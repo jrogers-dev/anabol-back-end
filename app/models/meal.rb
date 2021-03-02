@@ -1,4 +1,4 @@
 class Meal < ApplicationRecord
-  belongs_to :Day
+  belongs_to :day
   has_many :foods
 end
