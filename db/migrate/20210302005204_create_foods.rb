@@ -4,7 +4,8 @@ class CreateFoods < ActiveRecord::Migration[6.1]
       t.references :user, null: false, foreign_key: true
       
       t.string :name
-      t.float :serving
+      t.string :rapidapi_id
+      t.string :serving
       t.float :calories
       t.float :fat
       t.float :protein

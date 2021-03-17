@@ -26,7 +26,8 @@ ActiveRecord::Schema.define(version: 2021_03_02_005847) do
   create_table "foods", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name"
-    t.float "serving"
+    t.string "rapidapi_id"
+    t.string "serving"
     t.float "calories"
     t.float "fat"
     t.float "protein"

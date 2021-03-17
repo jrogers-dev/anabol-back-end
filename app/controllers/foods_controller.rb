@@ -27,6 +27,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:food).permit(:date)
+    params.require(:food).permit(:rapidapi_id, :user_id, :name, :serving, :calories, :fat, :protein, :carbohydrates)
   end
 end
