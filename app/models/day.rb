@@ -1,4 +1,5 @@
 class Day < ApplicationRecord
   belongs_to :user
-  has_many :meals, dependent: :destroy
+  has_many :meals
+  has_many :foods, through: :meals
 end

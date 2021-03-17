@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create(email: "test@example.com")
-#day = Day.create(user_id: user.id, date: Date.today)
-#meal = Meal.create(day_id: day.id)
-#food = Food.create(user_id: user.id, name: "Eggstuff", serving: 250, fat: 20, protein: 25, carbohydrates: 15)
+day = Day.create(user_id: user.id, date: Date.today)
+food = Food.create(user_id: user.id, name: "Eggstuff", serving: 250, fat: 20, protein: 25, carbohydrates: 15)
+meal = Meal.create(day_id: day.id, food_id: food.id, name: "Breakfast")
