@@ -1,4 +1,4 @@
 class DaySerializer
   include JSONAPI::Serializer
-  attributes 
+  attributes :id, :user_id, :date
 end

@@ -11,6 +11,7 @@ class DaysController < ApplicationController
 
   def show
     day = Day.find(params[:id])
+    render json: DaySerializer.new(day).serializable_hash
   end
 
   def update
@@ -26,6 +27,6 @@ class DaysController < ApplicationController
   private
 
   def day_params
-    params.require(:day).permit(:date)
+    params.require(:day).permit(:id, :user_id, :date)
   end
 end

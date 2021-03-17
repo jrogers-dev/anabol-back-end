@@ -11,6 +11,7 @@ class FoodsController < ApplicationController
 
   def show
     food = Food.find(params[:id])
+    render json: FoodSerializer.new(food).serializable_hash
   end
 
   def update

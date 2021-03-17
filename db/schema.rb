@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_005847) do
   end
 
   create_table "foods", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.string "name"
     t.float "serving"
     t.float "calories"
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_005847) do
     t.float "carbohydrates"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_foods_on_user_id"
   end
 
   create_table "meals", force: :cascade do |t|
@@ -48,5 +50,6 @@ ActiveRecord::Schema.define(version: 2021_03_02_005847) do
   end
 
   add_foreign_key "days", "users"
+  add_foreign_key "foods", "users"
   add_foreign_key "meals", "days"
 end
