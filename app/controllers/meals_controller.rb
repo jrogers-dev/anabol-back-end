@@ -1,6 +1,6 @@
 class MealsController < ApplicationController
   def index
-    meals = Meal.where("day_id = ?", params[:day_id])
+    meals = Meal.all
     render json: MealSerializer.new(meals).serializable_hash
   end
 
